@@ -11,6 +11,9 @@ import React from 'react'
 
 import './Sidebar.css'
 
+import { Users } from '../../dummydata'
+import CloseFrined from '../closeFriend/CloseFrined'
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -47,14 +50,9 @@ const Sidebar = () => {
         </ul>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          <li className="sidebarFriendListItem">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Shin Code</span>
-          </li>
+          {Users.map((user) => (
+            <CloseFrined user={user} key={user.id} />
+          ))}
         </ul>
       </div>
     </div>
