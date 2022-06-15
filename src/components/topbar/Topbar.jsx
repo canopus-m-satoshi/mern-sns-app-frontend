@@ -1,6 +1,8 @@
 import { Chat, Notifications, Search } from '@mui/icons-material'
 import React from 'react'
 
+import './Topbar.css'
+
 const Topbar = () => {
   return (
     <div className="topbarContainer">
@@ -16,18 +18,18 @@ const Topbar = () => {
             placeholder="探し物はなんですか？"
           />
         </div>
-        <div className="topbarRight">
-          <div className="topbarIconItem">
-            <Chat />
-            <span className="topbarIconBadge">1</span>
-          </div>
-          <div className="topbarIconItem">
-            <Notifications />
-            <span className="topbarIconBadge">2</span>
-          </div>
-        </div>
-        <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
       </div>
+      <div className="topbarRight">
+        <div className="topbarIconItem">
+          <Chat />
+          <span className="topbarIconBadge">1</span>
+        </div>
+        <div className="topbarIconItem">
+          <Notifications />
+          <span className="topbarIconBadge">2</span>
+        </div>
+      </div>
+      <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
     </div>
   )
 }
