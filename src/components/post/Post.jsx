@@ -5,9 +5,6 @@ import './Post.css'
 import { Users } from '../../dummydata'
 
 const Post = ({ post }) => {
-  const user = Users.filter((user) => user.id === 1)
-  console.log(user)
-
   return (
     <div className="post">
       <div className="postWrapper">
