@@ -4,7 +4,7 @@ import './Rightbar.css'
 
 const Rightbar = () => {
   return (
-    <div className="rightBar">
+    <div className="rightbar">
       <div className="rightbarWrapper">
         <div className="eventContainer">
           <img src="./assets/star.png" alt=" " className="starImg" />
