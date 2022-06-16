@@ -5,10 +5,10 @@ import './Rightbar.css'
 import { Users } from '../../dummydata'
 import Online from '../online/Online'
 
-const Rightbar = () => {
-  return (
-    <div className="rightbar">
-      <div className="rightbarWrapper">
+const Rightbar = ({ profile }) => {
+  const HomeRightbar = () => {
+    return (
+      <>
         <div className="eventContainer">
           <img src="./assets/star.png" alt=" " className="starImg" />
           <span className="eventText">
@@ -41,6 +41,18 @@ const Rightbar = () => {
           className="rightbarPromotionImg"
         />
         <p className="promotionName">Shin Code株式会社</p>
+      </>
+    )
+  }
+
+  const ProfileRightbar = () => {
+    return <>profileのrightbarです</>
+  }
+
+  return (
+    <div className="rightbar">
+      <div className="rightbarWrapper">
+        {profile ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   )
