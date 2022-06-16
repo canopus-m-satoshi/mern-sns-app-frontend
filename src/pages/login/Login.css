@@ -66,6 +66,13 @@
   cursor: pointer;
 }
 
+.loginMsg {
+  text-align: center;
+  font-weight: 550;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
 .loginForgot {
   text-align: center;
   color: #41428b;
