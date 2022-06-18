@@ -25,7 +25,7 @@ const Timeline = () => {
       <div className="timelineWrapper">
         <Share />
         {posts.map((post) => (
-          <Post post={post} key={post.id} />
+          <Post post={post} key={post._id} />
         ))}
       </div>
     </div>

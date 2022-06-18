@@ -7,7 +7,7 @@ import './Post.css'
 const Post = ({ post }) => {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
 
-  const [like, setLike] = useState(post.like)
+  const [like, setLike] = useState(post.likes.length)
   const [isLliked, setIsLike] = useState(false)
   const [user, setUser] = useState([])
 
