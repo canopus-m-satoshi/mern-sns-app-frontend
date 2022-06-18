@@ -16,7 +16,6 @@ const Post = ({ post }) => {
     const fetchUser = async () => {
       const response = await axios.get(`/users?userId=${post.userId}`)
       setUser(response.data)
-      console.log(`POST: ${post.userId}`)
     }
 
     fetchUser()
@@ -48,10 +47,6 @@ const Post = ({ post }) => {
               className="postProfileImg"
             />
             <span className="postUsername">{user.username}</span>
-            <br />
-            <br />
-            <p>name is : {user.username}</p>
-            <br />
             <span className="postDate">{format(post.createdAt)}</span>
           </div>
           <div className="postTopRight">

@@ -17,6 +17,7 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
+      // const response = await axios.get(`/users?username=${username}`)
       const response = await axios.get(`/users?username=${username}`)
       setUser(response.data)
     }
@@ -49,7 +50,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="profileRightBottom">
-            <Timeline username="" />
+            <Timeline username="shincode" />
             <Rightbar user={user} />
           </div>
         </div>
