@@ -1,8 +1,8 @@
-import { Timeline } from '@mui/icons-material'
 import React from 'react'
 import Rightbar from '../../components/rightbar/Rightbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Topbar from '../../components/topbar/Topbar'
+import Timeline from '../../components/timeline/Timeline'
 
 import './Profile.css'
 
