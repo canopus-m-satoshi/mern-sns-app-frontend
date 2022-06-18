@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './Post.css'
 
 import axios from 'axios'
-import { format, render, cancel, register } from 'timeago.js'
+import { format } from 'timeago.js'
 
 const Post = ({ post }) => {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
@@ -14,8 +14,9 @@ const Post = ({ post }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await axios.get(`/users/${post.userId}`)
+      const response = await axios.get(`/users?userId=${post.userId}`)
       setUser(response.data)
+      console.log(`POST: ${post.userId}`)
     }
 
     fetchUser()
@@ -47,6 +48,10 @@ const Post = ({ post }) => {
               className="postProfileImg"
             />
             <span className="postUsername">{user.username}</span>
+            <br />
+            <br />
+            <p>name is : {user.username}</p>
+            <br />
             <span className="postDate">{format(post.createdAt)}</span>
           </div>
           <div className="postTopRight">
@@ -55,7 +60,11 @@ const Post = ({ post }) => {
         </div>
         <div className="postCenter">
           <span className="postText">{post.desc}</span>
-          <img src={PUBLIC_FOLDER + post.img} alt="" className="postImg" />
+          {post.img ? (
+            <img className="postImg" src={PUBLIC_FOLDER + post.img} alt="" />
+          ) : (
+            <></>
+          )}
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">

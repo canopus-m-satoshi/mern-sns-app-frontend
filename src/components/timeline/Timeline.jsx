@@ -6,14 +6,14 @@ import axios from 'axios'
 
 import './Timeline.css'
 
-const Timeline = () => {
+const Timeline = ({ username }) => {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
     const fetchPost = async () => {
-      const response = await axios.get(
-        '/posts/timeline/62a568b1ffb1c8689df84181',
-      )
+      const response = username
+        ? await axios.get(`/posts/profile/${username}`)
+        : await axios.get('/posts/timeline/62ad6fd7c473c8640b3d8994')
       setPosts(response.data)
     }
 
