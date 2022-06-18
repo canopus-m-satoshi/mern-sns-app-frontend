@@ -13,6 +13,7 @@ import './Sidebar.css'
 
 import { Users } from '../../dummydata'
 import CloseFrined from '../closeFriend/CloseFrined'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   return (
@@ -21,7 +22,9 @@ const Sidebar = () => {
         <ul className="sidebarList">
           <li className="sidebarListItem">
             <Home className="sidebarIcon" />
-            <span className="sidarListItemText">Home</span>
+            <Link to="/">
+              <span className="sidarListItemText">Home</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Search className="sidebarIcon" />
@@ -41,7 +44,9 @@ const Sidebar = () => {
           </li>
           <li className="sidebarListItem">
             <Person className="sidebarIcon" />
-            <span className="sidarListItemText">プロフィール</span>
+            <Link to="/profile/shincode">
+              <span className="sidarListItemText">プロフィール</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Settings className="sidebarIcon" />
