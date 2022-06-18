@@ -13,7 +13,6 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/profile/:username" element={<Profile />} />
       </Routes>
-      <Home />
     </Router>
   )
 }
