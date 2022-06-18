@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import axios from 'axios'
 import Post from '../post/Post'
 import Share from '../share/Share'
+import axios from 'axios'
 
 import './Timeline.css'
 
