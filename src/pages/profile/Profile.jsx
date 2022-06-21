@@ -12,12 +12,12 @@ import { useParams } from 'react-router-dom'
 const Profile = () => {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
 
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState({})
   const username = useParams().username
+  console.log(username)
 
   useEffect(() => {
     const fetchUser = async () => {
-      // const response = await axios.get(`/users?username=${username}`)
       const response = await axios.get(`/users?username=${username}`)
       setUser(response.data)
     }
